@@ -1,0 +1,18 @@
+package com.curso.curso.controller;
+
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class CursoController {
+
+	@GetMapping("/parimpar")
+	public String metodo (@RequestParam int n) {
+		if (n % 2 == 0) {
+			return "O numero" + n + "é par";
+		} else {
+			return "O numero" + n + "é ímpar";
+		}
+	}
+}
