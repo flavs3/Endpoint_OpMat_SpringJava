@@ -8,7 +8,8 @@ import org.springframework.web.bind.annotation.RestController;
 public class CursoController {
 
 
-		@GetMapping	("/professor/{nome}/{area}/{disciplina}") 
+		@GetMapping	
+		("/professor/{nome}/{area}/{disciplina}") 
 		public String mapear (@PathVariable String nome,@PathVariable String area, @PathVariable String disciplina) {
 		return "Nome do professor:" + nome + "Área:" + area + "Disciplina:" + disciplina;
 	}
