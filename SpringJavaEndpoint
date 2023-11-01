@@ -1,0 +1,32 @@
+//Nome do pacote
+package br.com.spring.operacao.controller;
+
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class OperacaoController {
+
+	
+	@GetMapping("/adicao")
+	public int soma(@RequestParam int n1, @RequestParam int n2) {
+		return n1 + n2;
+	}
+
+	@GetMapping("/subtracao")
+	public int subtracao (@RequestParam int n1, @RequestParam int n2) {
+		return n1 - n2;
+	}
+
+	@GetMapping("/multiplicacao")
+	public int multiplicacao (@RequestParam int n1, @RequestParam int n2) {
+		return n1 * n2;
+	}
+
+	@GetMapping("/divisao")
+	public int divisao (@RequestParam int n1, @RequestParam int n2) {
+		return n1 / n2;
+	}
+
+}
